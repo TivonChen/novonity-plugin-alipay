@@ -1,0 +1,28 @@
+{
+  "name": "novonity-plugin-alipay",
+  "version": "1.0.0",
+  "description": "plugin for alipay",
+  "cordova": {
+    "id": "novonity-plugin-alipay",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TivonChen/novonity-plugin-alipay.git"
+  },
+  "keywords": [
+    "alipay",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "TivonChen",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/TivonChen/novonity-plugin-alipay/issues"
+  },
+  "homepage": "https://github.com/TivonChen/novonity-plugin-alipay#readme"
+}
