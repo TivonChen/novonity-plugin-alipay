@@ -59,7 +59,7 @@ public class AliPay extends CordovaPlugin {
 	};
 
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-		if(action.equals("alipay")) {
+		if(action.equals("pay")) {
 			payRun(args.getString(0));
             currentCallbackContext = callbackContext;
             return true;

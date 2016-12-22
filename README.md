@@ -12,14 +12,14 @@ $ ionic plugin add novonity-plugin-alipay
 Call the function below directly when using ionic1
 
 ```javascript
-AliPay.alipay(params);
+AliPay.pay(params);
 ```
 
 or in typescript when using ionic2
 
 ```typescript
 declare var AliPay: any;
-AliPay.alipay(params);
+AliPay.pay(params);
 ```
 
 # Notice

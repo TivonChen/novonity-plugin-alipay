@@ -10,17 +10,17 @@ const NSString* scheme = @"alisdkmayi";
 
 @implementation AlipayModule
 
-- (void) alipay: (CDVInvokedUrlCommand*)command {
+- (void) pay: (CDVInvokedUrlCommand*)command {
     NSString* args = [command.arguments objectAtIndex: 0];
-    
+
     if (args == nil) {
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"arg was null"];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         return;
     }
-    
+
     NSLog(@"alipay orderinfo = %@", args);
-    
+
     [[AlipaySDK defaultService] payOrder:args fromScheme:(NSString*)scheme callback:^(NSDictionary *resultDic) {
         NSLog(@"AlipayModule sendPayRequest result = %@", resultDic);
         NSString* result = [resultDic objectForKey:@"resultStatus"];
@@ -42,9 +42,9 @@ const NSString* scheme = @"alisdkmayi";
 
 - (void)handleOpenURL:(NSNotification*)notification {
     NSURL* url = [notification object];
-    
+
     NSLog(@"AlipayModule handleOpenURL url.scheme = %@", url.scheme);
-    
+
     if ([url isKindOfClass:[NSURL class]] && [url.scheme isEqualToString:(NSString*)scheme]) {
         [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"AlipayModule processOrderWithPaymentResult result = %@",resultDic);

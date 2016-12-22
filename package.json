@@ -1,6 +1,6 @@
 {
   "name": "novonity-plugin-alipay",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "plugin for alipay",
   "cordova": {
     "id": "novonity-plugin-alipay",

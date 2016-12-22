@@ -10,6 +10,6 @@
 
 @interface AlipayModule : CDVPlugin
 
-- (void)alipay: (CDVInvokedUrlCommand*)command;
+- (void)pay: (CDVInvokedUrlCommand*)command;
 
 @end
